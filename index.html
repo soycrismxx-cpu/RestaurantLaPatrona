@@ -1,15 +1,104 @@
 <!doctype html>
 <html lang="es-MX">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123e32"><meta name="description" content="Consulta la carta de La Patrona Restaurant Garden y nuestros datos para pago por transferencia."><title>La Patrona · Restaurant Garden</title><link rel="stylesheet" href="styles.css"><script src="script.js" defer></script></head>
-<body>
-<a class="skip" href="#menu">Saltar al menú</a>
-<header><a class="brand" href="#inicio">LA PATRONA<span>RESTAURANT GARDEN</span></a></header>
-<main>
-<section class="hero" id="inicio"><img src="assets/logo.jpeg" alt="La Patrona Restaurant Garden" width="1680" height="960"><h1>Bienvenidos a tu mesa</h1><p>Consulta la carta y disfruta a tu gusto.</p></section>
-<section class="menu-section section" id="menu"><div class="section-heading"><div><p class="eyebrow">PREPARADO AL MOMENTO</p><h2>¿Qué se te antoja?</h2></div><a class="text-link" href="assets/menu-original.jpeg" target="_blank" rel="noopener">Ver carta original</a></div><p class="section-intro">Pide tu orden completa. Precios en MXN.</p><nav class="categories" aria-label="Categorías del menú"><a href="#caldos">Pancita y birria</a><a href="#antojitos">Antojitos</a><a href="#ligero">Sabor ligero</a><a href="#bebidas">Pan y bebidas</a></nav><div id="menu-content"></div><noscript><p>Consulta todos los platillos y precios en la <a href="assets/menu-original.jpeg">foto de nuestra carta</a>. Activa JavaScript para ver el menú organizado y copiar los datos de pago.</p></noscript><p class="menu-footnote">Precios en pesos mexicanos (MXN), según la carta proporcionada.</p></section>
-<section class="payment section" id="pago"><div><p class="eyebrow">DATOS PARA TU PAGO</p><h2>Paga por transferencia</h2><p>Consulta los datos y copia lo que necesites para realizar tu pago.</p><p class="payment-note">Confirma el importe de tu cuenta con el restaurante antes de transferir.</p></div><div class="payment-card"><div class="card-top"><span>DATOS DE PAGO</span></div><dl><dt>CLABE interbancaria</dt><dd class="clabe">722969020741362396</dd><dt>Beneficiario</dt><dd>Veronica Camacho Luna</dd><dt>Institución</dt><dd>Mercado Pago W</dd><dt>Celular vinculado a Dimo</dt><dd>525616780736</dd></dl><div class="copy-actions"><button class="button gold" data-copy="clabe">Copiar CLABE</button><button class="button outline" data-copy="all">Copiar todos los datos</button><a id="receipt-whatsapp" class="button receipt" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a></div><p class="receipt-help" id="receipt-help">En WhatsApp, toca el clip para adjuntar la foto de tu comprobante antes de enviarlo.</p><p class="copy-help" id="copy-help" hidden>No se pudo copiar automáticamente. Selecciona el texto de los datos y cópialo manualmente.</p></div></section>
-<section class="order section" id="pedido"><p class="eyebrow">¿YA SABES QUÉ SE TE ANTOJA?</p><h2>¿Listo para pedir?</h2><p id="order-note">Los pedidos por WhatsApp estarán disponibles próximamente. Por ahora, realiza tu pedido directamente en el restaurante.</p><a id="whatsapp" class="button green" hidden target="_blank" rel="noopener">Pedir por WhatsApp</a><a class="text-link" href="#menu">Volver al menú</a></section>
-<section class="visit section" id="visitanos"><div><p class="eyebrow">TE ESPERAMOS</p><h2>Visítanos</h2></div><div class="contact-grid"><article><span>01 / HORARIO</span><h3>Un momento para disfrutar</h3><p id="hours">Horario por confirmar.</p></article><article><span>02 / UBICACIÓN</span><h3>Encuéntranos</h3><p id="address">Dirección por confirmar.</p></article><article><span>03 / CONTACTO</span><h3>Estamos para atenderte</h3><p id="contact">Contacto de pedidos por confirmar.</p></article></div></section>
-</main><footer><a class="brand" href="#inicio">LA PATRONA<span>RESTAURANT GARDEN</span></a><p>Gracias por tu preferencia.</p><a href="#inicio">Volver arriba</a></footer><div id="toast" role="status" aria-live="polite"></div>
-<nav class="bottom-nav" aria-label="Accesos principales"><a href="#menu"><span>Ver carta</span></a><a href="#pago"><span>Transferencia</span></a></nav></body></html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#123e32">
+    <meta name="description"
+        content="Consulta la carta de La Patrona Restaurant Garden y nuestros datos para pago por transferencia.">
+    <title>La Patrona · Restaurant Garden</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <a class="skip" href="#menu">Saltar al menú</a>
+    <header><a class="brand" href="#inicio">LA PATRONA<span>RESTAURANT GARDEN</span></a></header>
+    <main>
+        <section class="hero" id="inicio"><img src="assets/logo.jpeg" alt="La Patrona Restaurant Garden" width="1680"
+                height="960">
+            <h1>Bienvenidos a tu mesa</h1>
+            <p>Consulta la carta y disfruta a tu gusto.</p>
+        </section>
+        <section class="menu-section section" id="menu">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">PREPARADO AL MOMENTO</p>
+                    <h2>¿Qué se te antoja?</h2>
+                
+            <p class="section-intro">Pide tu orden completa. Precios en MXN.</p>
+            <nav class="categories" aria-label="Categorías del menú"><a href="#caldos">Pancita y birria</a><a
+                    href="#antojitos">Antojitos</a><a href="#ligero">Sabor ligero</a><a href="#bebidas">Pan y
+                    bebidas</a></nav>
+            <div id="menu-content"></div><noscript>
+                <p>Consulta todos los platillos y precios en la <a href="assets/menu-original.jpeg">foto de nuestra
+                        carta</a>. Activa JavaScript para ver el menú organizado y copiar los datos de pago.</p>
+            </noscript>
+            <p class="menu-footnote">Precios en pesos mexicanos (MXN), según la carta proporcionada.</p>
+        </section>
+        <section class="payment section" id="pago">
+            <div>
+                <p class="eyebrow">DATOS PARA TU PAGO</p>
+                <h2>Paga por transferencia</h2>
+                <p>Consulta los datos y copia lo que necesites para realizar tu pago.</p>
+                <p class="payment-note">Confirma el importe de tu cuenta con el restaurante antes de transferir.</p>
+            </div>
+            <div class="payment-card">
+                <div class="card-top"><span>DATOS DE PAGO</span></div>
+                <dl>
+                    <dt>CLABE interbancaria</dt>
+                    <dd class="clabe">722969020741362396</dd>
+                    <dt>Beneficiario</dt>
+                    <dd>Veronica Camacho Luna</dd>
+                    <dt>Institución</dt>
+                    <dd>Mercado Pago W</dd>
+                    <dt>Celular vinculado a Dimo</dt>
+                    <dd>525616780736</dd>
+                </dl>
+                <div class="copy-actions"><button class="button gold" data-copy="clabe">Copiar CLABE</button><button
+                        class="button outline" data-copy="all">Copiar todos los datos</button><a id="receipt-whatsapp"
+                        class="button receipt" target="_blank" rel="noopener">Enviar comprobante por WhatsApp</a></div>
+                <p class="receipt-help" id="receipt-help">En WhatsApp, toca el clip para adjuntar la foto de tu
+                    comprobante antes de enviarlo.</p>
+                <p class="copy-help" id="copy-help" hidden>No se pudo copiar automáticamente. Selecciona el texto de los
+                    datos y cópialo manualmente.</p>
+            </div>
+        </section>
+        <section class="order section" id="pedido">
+            <p class="eyebrow">¿YA SABES QUÉ SE TE ANTOJA?</p>
+            <h2>¿Listo para pedir?</h2>
+            <p id="order-note">Los pedidos por WhatsApp estarán disponibles próximamente. Por ahora, realiza tu pedido
+                directamente en el restaurante.</p><a id="whatsapp" class="button green" hidden target="_blank"
+                rel="noopener">Pedir por WhatsApp</a><a class="text-link" href="#menu">Volver al menú</a>
+        </section>
+        <section class="visit section" id="visitanos">
+            <div>
+                <p class="eyebrow">TE ESPERAMOS</p>
+                <h2>Visítanos</h2>
+            </div>
+            <div class="contact-grid">
+                <article><span>01 / HORARIO</span>
+                    <h3>Un momento para disfrutar</h3>
+                    <p id="hours">Horario por confirmar.</p>
+                </article>
+                <article><span>02 / UBICACIÓN</span>
+                    <h3>Encuéntranos</h3>
+                    <p id="address">Dirección por confirmar.</p>
+                </article>
+                <article><span>03 / CONTACTO</span>
+                    <h3>Estamos para atenderte</h3>
+                    <p id="contact">Contacto de pedidos por confirmar.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer><a class="brand" href="#inicio">LA PATRONA<span>RESTAURANT GARDEN</span></a>
+        <p>Gracias por tu preferencia.</p><a href="#inicio">Volver arriba</a>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <nav class="bottom-nav" aria-label="Accesos principales"><a href="#menu"><span>Ver carta</span></a><a
+            href="#pago"><span>Transferencia</span></a></nav>
+</body>
+
+</html>
