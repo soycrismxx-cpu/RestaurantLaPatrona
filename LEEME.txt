@@ -1,0 +1,15 @@
+LA PATRONA RESTAURANT GARDEN
+
+Abre index.html con doble clic. El sitio funciona sin instalación ni conexión para consultar el menú y los datos de pago.
+
+DATOS EDITABLES
+En la primera constante CONFIG de script.js puedes completar whatsapp (código de país y número, solo dígitos), horario, direccion y contacto. El botón de WhatsApp aparece al configurar un número válido. El celular de Dimo NO se usa como teléfono de pedidos.
+
+El menú y sus precios se editan en MENU, dentro de script.js. Los precios se transcribieron de assets/menu-original.jpeg. Se normalizó la ortografía de algunos nombres (por ejemplo, Suizas). Revisa la carta con el restaurante antes de publicar.
+
+Los datos de pago aparecen en index.html y en payment dentro de script.js: actualiza ambos si cambian.
+
+assets/logo.jpeg y assets/menu-original.jpeg son los dos archivos originales proporcionados.
+Los botones de copia intentan usar el portapapeles y una alternativa compatible con archivos locales. Si el navegador lo bloquea, se muestra una indicación para copiar manualmente.
+
+No se ha publicado el sitio en internet.
