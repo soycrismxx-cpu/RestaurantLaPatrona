@@ -1,6 +1,5 @@
-// Edita aquí los datos pendientes. WhatsApp: código de país + número, solo dígitos.
-// El número de Dimo es exclusivamente de pago; no se usa para pedidos.
-const CONFIG = { whatsapp: '', horario: '', direccion: '', contacto: '' };
+// Número de WhatsApp para recibir comprobantes: código de país + número, solo dígitos.
+const CONFIG = { whatsapp: '525616780736' };
 const MENU = [
  {id:'caldos',title:'Pancita y birria',cards:[
  ['Pancita','', [['Chica',115],['Grande',120],['Consomé',45],['Tortilla · ½ docena',30],['Tortilla · docena',40]]],
@@ -37,7 +36,7 @@ for(const group of MENU){
 const payment={clabe:'722969020741362396',all:'CLABE: 722969020741362396\nBeneficiario: Veronica Camacho Luna\nInstitución: Mercado Pago W\nCelular vinculado a Dimo: 525616780736'};
 const receiptMessage='Hola, acabo de realizar mi transferencia. Adjunto mi comprobante de pago.';
 const receiptLink=document.getElementById('receipt-whatsapp');
-receiptLink.href=`https://wa.me/?text=${encodeURIComponent(receiptMessage)}`;
+receiptLink.href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(receiptMessage)}`;
 let toastTimer;
 function notify(message){const toast=document.getElementById('toast');toast.textContent=message;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{toast.textContent='';},4000);}
 async function copy(text){
@@ -46,8 +45,3 @@ async function copy(text){
  }
 }
 document.querySelectorAll('[data-copy]').forEach(button=>button.addEventListener('click',async()=>{const success=await copy(payment[button.dataset.copy]);document.getElementById('copy-help').hidden=success;notify(success?'Datos copiados.':'Selecciona y copia los datos manualmente.');}));
-for(const [key,id] of [['horario','hours'],['direccion','address'],['contacto','contact']])if(CONFIG[key])document.getElementById(id).textContent=CONFIG[key];
-if(/^\d{10,15}$/.test(CONFIG.whatsapp)){
- const link=document.getElementById('whatsapp');link.href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent('Hola, quisiera hacer un pedido en La Patrona. ¿Me ayudan?')}`;link.hidden=false;document.getElementById('order-note').textContent='Escríbenos para consultar disponibilidad y hacer tu pedido.';
- receiptLink.href=`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(receiptMessage)}`;
-}
